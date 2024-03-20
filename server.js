@@ -54,9 +54,10 @@ app.get("/", function (request, response) {      // Maak een GET route voor de h
       fetchJson('https://fdnd-agency.directus.app/items/tm_story'),
       fetchJson('https://fdnd-agency.directus.app/items/tm_language'),
       fetchJson('https://fdnd-agency.directus.app/items/tm_audio')]).then(([storyData, languageData, playlistData, audioData]) => {    // Haal alle playlists uit de directus API op
-      response.render('lessons', {
+      response.render('stories', {
         stories: storyData.data, 
         language: languageData.data,
+        playlist: playlistData.data,
       });
     });
   });
@@ -72,11 +73,11 @@ app.get("/", function (request, response) {      // Maak een GET route voor de h
 
 //   START DE WEBSERVER
 
-// Stel het poortnummer in waar express op moet gaan luisteren
+    // Stel het poortnummer in waar express op moet gaan luisteren
 app.set("port", process.env.PORT || 8000);
 
-// Start express op, haal daarbij het zojuist ingestelde poortnummer op
+    // Start express op, haal daarbij het zojuist ingestelde poortnummer op
 app.listen(app.get("port"), function () {
-// Toon een bericht in de console en geef het poortnummer door
+    // Toon een bericht in de console en geef het poortnummer door
   console.log(`Application started on http://localhost:${app.get("port")}`);
 });
