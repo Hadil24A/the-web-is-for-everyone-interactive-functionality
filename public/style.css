@@ -151,17 +151,17 @@ a {
 }
 
 .navigatie {
-    background: var(--menu-bg);
-    border: none;
-    border-radius: 16px;
-    bottom: 2em;
-    cursor: pointer;
-    margin: 0em 1em 0em 1em;
-    padding: 0.5em;
-    position: fixed;
-    right: 1em;
-    z-index: 999;
-  }
+  background: var(--menu-bg);
+  border: none;
+  border-radius: 16px;
+  bottom: 2em;
+  cursor: pointer;
+  margin: 0em 1em 0em 1em;
+  padding: 0.5em;
+  position: fixed;
+  right: 1em;
+  z-index: 999;
+}
 
 .navigatie {
   display: block;
@@ -298,13 +298,29 @@ dialog p {
   position: absolute;
 }
 
+.makeAPlaylistBtn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  height: max-content;
+}
+
 .makeAPlaylist {
   background: rgb(73, 67, 117,0.9);
+}
+
+.makeAPlaylist svg {
+  fill: var(--menu-clr);
+}
+
+.makeAPlaylist svg:hover {
+  fill: var(--btn-bg);
 }
 
 .makeAPlaylist p:nth-of-type(1) {
   color: var(--active-menu-bg);
   padding: 0.5em;
+  width: max-content;
 }
 
 .makeAPlaylist p:nth-of-type(2) {
@@ -316,6 +332,70 @@ dialog p {
 
 .makeAPlaylist svg {
   margin: 0.5em 2.5em 0 2.5em;
+}
+
+.newPlaylistOpen {
+  visibility: visible;
+  background: var(--method-bg);
+  height: 40em;
+  width: 24em;
+  padding: 3em;
+  z-index: 956;
+  position: absolute;
+  border: 2px solid var(--method-3);
+}
+
+.newPlaylist {
+  visibility: hidden;
+}
+
+#closeDialog {
+  background: none;
+  height: max-content;
+  width: max-content;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 4em;
+  left: 1em;
+}
+
+.newPlaylist h2 {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 3em;
+  left: 20%;
+}
+
+#submitPL {
+  background: none;
+  height: max-content;
+  width: 4em;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 5em;
+  right: 1em;
+  color: var(--menu-clr);
+}
+
+#addImg {
+  position: absolute;
+  top: 13em;
+  left: 6em;
+  background: var(--btn-bg);
+  padding: 6em;
+  border-radius: 8px;
+}
+
+.newPlaylist input {
+  width: 20em;
+  height: 3em;
+  position: absolute;
+  top: 32em;
+  left: 2.2em;
 }
 
 .heart, .redHeart {
@@ -507,3 +587,9 @@ section:nth-of-type(3) a {
   margin: 0.5em;
   border-radius: 8px;
  }
+
+ /* ___  ___  ___  __ __  ____     ___     ____  __     ___  _  _ __    __  __  ______
+    ||\\//|| // \\ || // ||       // \\    || \\ ||    // \\ \\// ||    || (( \ | || |
+    || \/ || ||=|| ||<<  ||==     ||=||    ||_// ||    ||=||  )/  ||    ||  \\    ||  
+    ||    || || || || \\ ||___    || ||    ||    ||__| || || //   ||__| || \_))   ||  */ 
+
