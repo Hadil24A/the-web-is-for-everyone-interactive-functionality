@@ -1,10 +1,9 @@
-*,
-html {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins";
-  }
+*, html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
 
  /*___ __ __  __  ______   ___   ___  ___    ____  ____    ___   ____   ____ ____  ______ __  ____  __ 
   //   || || (( \ | || |  // \\  ||\\//||    || \\ || \\  // \\  || \\ ||    || \\ | || | || ||    (( \
@@ -68,7 +67,7 @@ html {
 
 .lessonsPage {
   background: var(--method-bg);
-  width: 100%;
+  width: 100dvh;
 }
 
 /*__  __   ___   ___  ___  ____    ____   ___    ___   ____
@@ -251,18 +250,14 @@ dialog p {
   ||    ||==   \\   \\  ((   )) ||\\||  \\ 
   ||__| ||___ \_)) \_))  \\_//  || \|| \_)) */
 
-
-.ownPlaylist {
+.ownPlaylist, .playlist {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
   }
 
-.playlist {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.playlist li, .makeAPlaylist {
+.ownPlaylist li, .playlist li {
   background: var(--menu-clr);
   border-radius: 8px;
   display: flex;
@@ -274,9 +269,10 @@ dialog p {
   width: 10em;
 }
 
-.playlist img {
+.ownPlaylist img, .playlist img {
   border-radius: 8px;
   height: 7.5em;
+  width: 9em;
 }
 
 .playPlaylist {
@@ -287,17 +283,6 @@ dialog p {
   width: max-content;
 }
 
-.playlist li p:first-child {
-  font-weight: bold;
-}
-
-.playlist p:last-child {
-  bottom: 1.3em;
-  font-size: 12px;
-  left: 3em;
-  position: absolute;
-}
-
 .makeAPlaylistBtn {
   cursor: pointer;
   background: none;
@@ -305,33 +290,30 @@ dialog p {
   height: max-content;
 }
 
-.makeAPlaylist {
+.ownPlaylist li:nth-of-type(1) {
   background: rgb(73, 67, 117,0.9);
 }
 
-.makeAPlaylist svg {
+.ownPlaylist li:nth-of-type(1) svg {
   fill: var(--menu-clr);
+  margin: 0.5em 2.5em 0 2.5em;
 }
 
-.makeAPlaylist svg:hover {
+.ownPlaylist li:nth-of-type(1) svg:hover {
   fill: var(--btn-bg);
 }
 
-.makeAPlaylist p:nth-of-type(1) {
+.ownPlaylist li:nth-of-type(1) p:nth-of-type(1) {
   color: var(--active-menu-bg);
   padding: 0.5em;
   width: max-content;
 }
 
-.makeAPlaylist p:nth-of-type(2) {
+.ownPlaylist li:nth-of-type(1) p:nth-of-type(2) {
   color: var(--active-menu-bg);
   font-size: 13px;
   margin-top: 1.5em;
   text-align: center;
-}
-
-.makeAPlaylist svg {
-  margin: 0.5em 2.5em 0 2.5em;
 }
 
 .newPlaylistOpen {
