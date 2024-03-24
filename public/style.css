@@ -67,7 +67,7 @@
 
 .lessonsPage {
   background: var(--method-bg);
-  width: 100dvh;
+  width: 100vw;
   height: 100vh;
 }
 
