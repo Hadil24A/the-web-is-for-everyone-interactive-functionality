@@ -68,6 +68,14 @@
 .lessonsPage {
   background: var(--method-bg);
   width: 100dvh;
+  height: 100vh;
+}
+
+.newPlaylistPage {
+  background: var(--method-bg);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /*__  __   ___   ___  ___  ____    ____   ___    ___   ____
@@ -315,30 +323,25 @@ dialog p {
   margin-top: 1.5em;
   text-align: center;
 }
-
-.newPlaylistOpen {
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+.newPlaylist {
   visibility: visible;
-  background: var(--method-bg);
   height: 40em;
   width: 24em;
   padding: 3em;
   z-index: 956;
-  position: absolute;
-  border: 2px solid var(--method-3);
+  margin: auto;
 }
 
-.newPlaylist {
-  visibility: hidden;
-}
-
-#closeDialog {
+#backIcon {
   background: none;
   height: max-content;
   width: max-content;
   border: none;
   cursor: pointer;
+  z-index: 960;
   position: absolute;
-  top: 4em;
+  top: 1em;
   left: 1em;
 }
 
@@ -346,9 +349,6 @@ dialog p {
   width: max-content;
   display: flex;
   justify-content: center;
-  position: absolute;
-  top: 3em;
-  left: 20%;
 }
 
 #submitPL {
@@ -357,29 +357,30 @@ dialog p {
   width: 4em;
   border: none;
   cursor: pointer;
-  position: absolute;
-  top: 5em;
-  right: 1em;
   color: var(--menu-clr);
+  position: absolute;
+  top: 2em;
+  right: 1em;
 }
 
 #addImg {
-  position: absolute;
-  top: 13em;
-  left: 6em;
   background: var(--btn-bg);
   padding: 6em;
   border-radius: 8px;
+  margin: 3em;
 }
 
 .newPlaylist input {
   width: 20em;
   height: 3em;
-  position: absolute;
-  top: 32em;
-  left: 2.2em;
+  display: flex;
+  justify-content: center;
+  padding: 0.2em;
+  border: none;
+  border-radius: 8px;
+  margin: 1em;
 }
-
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
 .heart, .redHeart {
   bottom: 1em;
   position: absolute;
@@ -543,7 +544,7 @@ section:nth-of-type(3) a {
  ||=|| ||    ||        \\    ||   ((   )) ||_// || ||==   \\ 
  || || ||__| ||__|    \_))   ||    \\_//  || \\ || ||___ \_))  */
 
- input {
+ .lessonsPage input {
   width: 30em;
   display: flex;
   justify-content: center;

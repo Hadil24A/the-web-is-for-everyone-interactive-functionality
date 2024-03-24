@@ -15,33 +15,25 @@
     <section>
         <h2>Own playlist</h2>
         <ul class="ownPlaylist">
-                <li><button type="button" class="makeAPlaylistBtn"><svg width="68" height="68" viewBox="0 0 68 68"  xmlns="http://www.w3.org/2000/svg"><rect x="30" width="8" height="68" rx="4"/><rect x="68" y="30" width="8" height="68" rx="4" transform="rotate(90 68 30)"/></svg></button>
-                    <p>Make a playlist!</p>
-                    <p>Add your favourite stories in one playlist</p>
-                </li>
-            
-            <dialog class="newPlaylist">
-                <button id="closeDialog"><svg version="1.0" xmlns="http://www.w3.org/2000/svg"width="48" height="48" viewBox="0 0 512.000000 512.000000"preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#fff" stroke="none"><path d="M2391 3364 c-435 -438 -791 -800 -791 -804 0 -12 1581 -1600 1594 -1600 14 0 326 311 326 325 0 6 -285 295 -632 642 l-633 633 633 633 c347 347 632 637 632 642 0 14 -313 325 -327 325 -6 0 -367 -358 -802 -796z"/></g></svg></button>
-                <h2>New playlist</h2>
-                <button id="submitPL" type="submit">Make a playlist</button>
-                <button id="addImg"><svg width="60" height="58" viewBox="0 0 60 58" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2_2217)"><path d="M50.4752 11.193V8.6954C50.4752 6.67441 48.7701 5.03019 46.6742 5.03019H42.4752C40.3794 5.03019 38.6742 6.67441 38.6742 8.6954V11.0756H31.7648V9.14699C31.7648 6.50346 29.5346 4.35287 26.7931 4.35287H10.4966C7.7552 4.35287 5.52496 6.50346 5.52496 9.14699V11.1928C2.38304 11.7703 0 14.4376 0 17.6327V43.0899C0 46.7055 3.0504 49.647 6.8 49.647H49.2C52.9496 49.647 56 46.7055 56 43.0899V17.6327C56 14.4376 53.617 11.7703 50.4752 11.193ZM41.8742 8.6954C41.8742 8.37587 42.1438 8.1159 42.4752 8.1159H46.6742C47.0056 8.1159 47.2752 8.37587 47.2752 8.6954V11.0756H41.8742V8.6954ZM8.72496 9.14699C8.7248 8.20508 9.51968 7.43859 10.4966 7.43859H26.7933C27.7701 7.43859 28.565 8.20493 28.565 9.14699V11.0756H8.72496V9.14699ZM52.8 43.0899C52.8 45.0041 51.185 46.5613 49.2 46.5613H6.8C4.81504 46.5613 3.2 45.0041 3.2 43.0899V17.6327C3.2 15.7185 4.81504 14.1613 6.8 14.1613H49.2C51.185 14.1613 52.8 15.7185 52.8 17.6327V43.0899Z" fill="white" stroke="white" stroke-width="0.571429"/><path d="M20 18.0184C12.942 18.0184 7.19995 23.5554 7.19995 30.3613C7.19995 37.1671 12.942 42.7041 20 42.7041C27.0579 42.7041 32.7999 37.1671 32.7999 30.3613C32.7999 23.5554 27.0579 18.0184 20 18.0184ZM20 39.6184C14.7065 39.6184 10.4 35.4657 10.4 30.3613C10.4 25.2569 14.7065 21.1041 20 21.1041C25.2934 21.1041 29.6 25.2569 29.6 30.3613C29.6 35.4657 25.2934 39.6184 20 39.6184Z" fill="white" stroke="white" stroke-width="0.571429"/><path d="M46.9965 16.8613H42.3032C40.5093 16.8613 39.0498 18.2687 39.0498 19.9984V22.9812C39.0498 24.711 40.5093 26.1183 42.3032 26.1183H46.9965C48.7904 26.1183 50.2498 24.7109 50.2498 22.9812V19.9985C50.2498 18.2687 48.7903 16.8613 46.9965 16.8613ZM47.0498 22.9813C47.0498 23.0097 47.026 23.0327 46.9965 23.0327H42.3032C42.2736 23.0327 42.2498 23.0097 42.2498 22.9813V19.9985C42.2498 19.9701 42.2736 19.9471 42.3032 19.9471H46.9965C47.026 19.9471 47.0498 19.9701 47.0498 19.9985V22.9813Z" fill="white" stroke="white" stroke-width="0.571429"/></g><defs><clipPath id="clip0_2_2217"><rect width="56" height="54" fill="white"/></clipPath></defs></svg></button>
-                <input id="playlistName" type="text" required placeholder="Name playlist">
-            </dialog>
+                <a href="/add-a-playlist">
+                    <li class="makeAPlaylistBtn"><svg width="68" height="68" viewBox="0 0 68 68"  xmlns="http://www.w3.org/2000/svg"><rect x="30" width="8" height="68" rx="4"/><rect x="68" y="30" width="8" height="68" rx="4" transform="rotate(90 68 30)"/></svg></a>
+                        <p>Make a playlist!</p>
+                        <p>Add your favourite stories in one playlist</p>
+                    </li>
 
-                    <% playlist.forEach(playlist => { %>
-                        <a href="#">
-                            <li>
-                            <% if (playlist.image) { %>
-                                <img src="https://fdnd-agency.directus.app/assets/<%= playlist.image %>" alt="playlist">       
-                            <% } %>             
-                            <p><%=playlist.title%></p>
-                            <a href="#" class="playPlaylist" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#F3A22A"/><rect width="16.8" height="16.8" transform="translate(3.59961 3.6001)" fill="#F3A22A"/><path d="M17.0874 13.0614C17.7817 12.5242 17.7817 11.476 17.0874 10.9387C14.9891 9.31514 12.6461 8.03543 10.146 7.14749L9.68929 6.98528C8.8155 6.67494 7.89254 7.26613 7.77425 8.16812C7.44374 10.6883 7.44374 13.3119 7.77425 15.832C7.89254 16.734 8.8155 17.3252 9.68929 17.0148L10.146 16.8526C12.6461 15.9647 14.9891 14.685 17.0874 13.0614Z" fill="white"/></svg>
-                            <p>31 min. 55sec</p>
-                        </li>
-                    <% }) %>
-                </ul>
-            </a>
-        </article>
+            <% playlist.forEach(playlist => { %>
+                <a href="#">
+                    <li>
+                        <% if (playlist.image) { %>
+                            <img src="https://fdnd-agency.directus.app/assets/<%= playlist.image %>" alt="playlist">       
+                        <% } %>             
+                        <p><%=playlist.title%></p>
+                        <a href="#" class="playPlaylist" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#F3A22A"/><rect width="16.8" height="16.8" transform="translate(3.59961 3.6001)" fill="#F3A22A"/><path d="M17.0874 13.0614C17.7817 12.5242 17.7817 11.476 17.0874 10.9387C14.9891 9.31514 12.6461 8.03543 10.146 7.14749L9.68929 6.98528C8.8155 6.67494 7.89254 7.26613 7.77425 8.16812C7.44374 10.6883 7.44374 13.3119 7.77425 15.832C7.89254 16.734 8.8155 17.3252 9.68929 17.0148L10.146 16.8526C12.6461 15.9647 14.9891 14.685 17.0874 13.0614Z" fill="white"/></svg>
+                        <p>31 min. 55sec</p>
+                    </li>
+                </a>
+            <% }) %>
+        </ul>
     </section>
 
     <!-- ALL STORIES -->

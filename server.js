@@ -1,6 +1,3 @@
-console.log('Hier komt je server')
-
-
 // OPZETTEN VAN DE WEBSERVER
 
     // Importeer het npm pakket express uit de node_modules map
@@ -61,6 +58,10 @@ app.get("/", function (request, response) {      // Maak een GET route voor de h
       });
     });
   });
+
+  app.get("/add-a-playlist", function (request, response) {
+    response.render("add-a-playlist", {});
+  })
   
   app.get("/statistics", function (request, response) {      //GET route voor de statistics page
     response.send("statistics");         
