@@ -4,9 +4,11 @@
     <a href="/lessons" id="backIcon"> <%- include('./partials/backSVG') %> </a>
     <div class="newPlaylist">
         <h1>New playlist</h1>
-        <button id="submitPL" type="submit">Make playlist</button>
-        <button id="addImg"> <%- include('./partials/cameraSVG') %> </button>
-        <input id="playlistName" type="text" required placeholder="Name playlist">
+        <form>       
+            <a href="/lessons" disabled id="submitPL" type="submit">Make playlist</a>
+            <button id="addImg"> <%- include('./partials/cameraSVG') %> </button>
+            <input id="playlistName" type="text" required placeholder="Name playlist">
+        </form>
     </div>
 </main>
 

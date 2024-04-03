@@ -1,24 +1,34 @@
 <%- include('./partials/head') %>
-    <%- include('./partials/navigatie', {current: '/'}) %>
+<%- include('./partials/navigatie', {current: '/'}); %>
     
     <body class="homescreen">
       <div class="start-text"> <p>Goodmorning,<br> Shall we start with a story?</p><button id="start"><p>Let's do it!</p></button></div>
       
       <dialog class="home-menu">
-          <a href="/"> <%- include('./partials/homenav') %>
-          <p>Home</p></a>
+        <a href="/"
+          <%- include('./partials/homeNavSVG') %> >
+          <p>Home</p>
+        </a>
 
-          <a href="#"> <%- include('./partials/testingnav') %>
-          <p>Testing</p></a>
+        <a href="#"
+          <%- include('./partials/testingNavSVG') %> >
+          <p>Testing</p>
+        </a>
 
-          <a href="#"> <%- include('./partials/lessonsnav') %>
-          <p>Lessons</p></a>
+        <a href="/lessons"
+          <%- include('./partials/lessonsNavSVG') %> >
+          <p>Lessons</p>
+        </a>
 
-          <a href="#"> <%- include('./partials/statisticsnav') %>
-          <p>Statistics</p></a>
+        <a href="#"
+          <%- include('./partials/statisticsNavSVG') %> >
+          <p>Statistics</p>
+        </a>
 
-          <a href="#"> <%- include('./partials/profilenav') %> 
-          <p>Profile</p></a>
+        <a href="#"
+          <%- include('./partials/profileNavSVG') %> >
+          <p>Profile</p>
+        </a>
       </dialog>
     </body>
 <%- include('./partials/foot') %>

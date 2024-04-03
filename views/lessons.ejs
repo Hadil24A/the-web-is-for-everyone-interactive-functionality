@@ -1,4 +1,4 @@
-<%- include('./partials/head') %>
+<%- include('partials/head') %>
 <%- include('./partials/navigatie', {current: '/lessons'}); %>
 <main class="lessonsPage">
     <section>
@@ -65,7 +65,7 @@
                         <p>3 min. 5sec</p></a>  
                     </div>
 
-                    <img id="storyFlag" src="/images/menu buttons/english.flag.svg" alt="flag">
+                    <img src="https://fdnd-agency.directus.app/assets/<%= language.flag %>" alt="flag" id="storyFlag">
                     <button class="downloadStory"> <%- include('./partials/downloadSVG') %> </button>
                     <button class="addToPlaylist"> <%- include('./partials/addSVG') %> </button>
                 </li>
