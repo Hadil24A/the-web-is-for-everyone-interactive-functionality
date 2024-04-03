@@ -9,6 +9,9 @@ import fetchJson from "./helpers/fetch-json.js";
     // Maak een nieuwe express app aan
 const app = express();
 
+// Niewe plylist aanmaken
+let newPlaylist = []
+
     // Stel ejs in als template engine
 app.set("view engine", "ejs");
 
@@ -37,13 +40,13 @@ app.get("/", function (request, response) {      // Maak een GET route voor de h
       fetchJson('https://fdnd-agency.directus.app/items/tm_language'),
       fetchJson('https://fdnd-agency.directus.app/items/tm_playlist'),
       fetchJson('https://fdnd-agency.directus.app/items/tm_audio')]).then(([storyData, languageData, playlistData, audioData]) => {    // Haal alle playlists uit de directus API op
-      response.render('lessons', {
+      response.render('lessons', {         // Render lessons.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd playlistData, storyData, languageData, audioData
         stories: storyData.data, 
         language: languageData.data,
-        playlist: playlistData.data,
-        audio: audioData.data})        // Render lessons.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd playlistData, storyData, languageData, audioData
+        playlist: playlistData.data, 
+        audio: audioData.data,
+        newPlaylists: newPlaylist})  
     });   
-         
   });
   
   app.get("/stories", function (request, response) {      // GET route voor de stories page
@@ -61,6 +64,13 @@ app.get("/", function (request, response) {      // Maak een GET route voor de h
 
   app.get("/add-a-playlist", function (request, response) {
     response.render("add-a-playlist", {});
+  })
+
+  app.post("/add-a-playlist", function (request, response) { 
+    newPlaylist.push(request.body(newPlaylists))
+    console.log(newPlaylist);
+    response.redirect(303, '/lessons/');
+
   })
   
   app.get("/statistics", function (request, response) {      //GET route voor de statistics page

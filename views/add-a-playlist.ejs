@@ -2,14 +2,20 @@
 
 <main class="newPlaylistPage">
     <a href="/lessons" id="backIcon"> <%- include('./partials/backSVG') %> </a>
-    <div class="newPlaylist">
-        <h1>New playlist</h1>
-        <form>       
-            <a href="/lessons" disabled id="submitPL" type="submit">Make playlist</a>
-            <button id="addImg"> <%- include('./partials/cameraSVG') %> </button>
-            <input id="playlistName" type="text" required placeholder="Name playlist">
-        </form>
-    </div>
+    <h1>New Playlist</h1>
+    <form method="post">
+        <div class="image-preview-container">
+            <div class="preview">
+            <label for="image-upload">
+                <img src=# alt="Preview uploaded image"  id="addImg"> <%- include('./partials/cameraSVG') %>
+                Selecteer je afbeelding</label>
+            <input type="file" id="image-upload" accept="image/*" onchange="previewImage(event);" />
+        </div>
+        </div>
+        <input id="playlistName" type="text" required placeholder="Name playlist" name="NewPlaylists">
+        <button id="submitPL" type="submit">Make playlist</button>
+    </form>
+    <a href="/lessons" id="showPL">Show playlists</a>
 </main>
 
 <%- include('./partials/foot') %>

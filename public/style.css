@@ -362,14 +362,12 @@ section:nth-of-type(1) {
     width: max-content;
   }
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------ */
-.newPlaylist {
-    height: 40em;
-    margin: auto;
+/* ------------------ ADD A PLAYLIST ----------------------------------------------------------------------------------------------------------------------- */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 3em;
-    visibility: visible;
-    width: 24em;
-    z-index: 956;
   }
 
 #backIcon {
@@ -384,22 +382,31 @@ section:nth-of-type(1) {
     z-index: 960;
   }
 
-.newPlaylist h2 {
+form h2 {
     display: flex;
     justify-content: center;
     width: max-content;
   }
 
-#submitPL {
+#submitPL, #showPL {
     background: none;
-    border: none;
+    border: 1px solid var(--menu-clr);
+    border-radius: var(--border);
     color: var(--menu-clr);
     cursor: pointer;
-    height: max-content;
+    height: 2.5em;
+    padding: 0.2em;
+  }
+
+#submitPL {
+    width: 20em;
+  }
+
+#showPL {
     position: absolute;
     right: 1em;
     top: 2em;
-    width: 4em;
+    width: max-content;
   }
 
 #addImg {
@@ -410,7 +417,7 @@ section:nth-of-type(1) {
     padding: 6em;
   }
 
-.newPlaylist input {
+form input {
     border: none;
     border-radius: var(--border);
     display: flex;
@@ -426,7 +433,38 @@ form:invalid [type="submit"] {
   color: grey;
 }
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+.image-preview-container {
+  background: var(--green);
+  background-position: center;
+  border: 0.3em solid var(--menu-clr);
+  cursor: pointer;
+  display: block;
+  margin: 1em;
+  text-align: center;
+  width: 30em;
+  border-radius: 8px;
+
+}
+
+.newPlaylistPage img {
+  display: none;
+  width: 100%;
+}
+
+.newPlaylistPage input:nth-of-type(1) {
+  display: none;
+}
+
+.newPlaylistPage label {
+  display: block;
+  margin-left: auto;
+  cursor: pointer;
+  padding: 1em;
+  color: var(--menu-clr);
+  font-size: 24px;
+}
+
+/* ---------------------------- EINDE ADD A PLAYLIST -------------------------------------------------------------------------------------------------------------- */
 .heart,
 .redHeart {
     bottom: 1em;

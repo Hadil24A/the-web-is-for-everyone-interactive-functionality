@@ -7,14 +7,22 @@ navigatie.addEventListener("click", () => {
   menu.classList.toggle("home-menu-active");
 });
 
-let submitButton = document.getElementById("submitPL");
-let input = document.getElementById("playlistName");
 
-input =addEventListener("keyup", (e) => {
-  let value = e.currentTarget.value;
-  submitButton.disabled = false;
+let input = document.getElementById('image-upload');
+let previewImage = () => {
+    let files = input.files;
+    if (files && files.length > 0) {
+        let fileReader = new FileReader();
+        let preview = document.getElementById('addImg'); 
+        fileReader.onload = function (event) {
+            preview.style.display = 'block';
+            preview.setAttribute('src', event.target.result);
+        }
+        fileReader.readAsDataURL(files[0]);
+    }
+}
+input.addEventListener("change", previewImage);
 
-  if (value === "") {
-    submitButton.disabled = true;
-  }
-});
+let newPlaylist = []
+newPlaylist.push()
+console.log(newPlaylist)
