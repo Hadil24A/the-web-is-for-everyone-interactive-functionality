@@ -13,8 +13,8 @@ html {
 
 :root {
   /* BACKGROUND COLOURS */
-  --method-1: rgb(113, 60, 120);
-  --method-2: rgb(66, 14, 73);
+  --method-1: rgb(66, 14, 73);
+  --method-2: rgb(49, 7, 62);
   --method-3: rgb(9, 21, 65);
 
   --statistics-1: rgba(33, 155, 155, 1);
@@ -71,9 +71,9 @@ html {
   --profile-btn-bg: #fd8c73;
 
   --btn-bg: #9264f4;
+  --contrast: #6990BF;
 
-  /* border-radius */
-
+  /* border radius */
   --border: 8px; 
 }
 
@@ -478,14 +478,18 @@ form:invalid [type="submit"] {
     flex-wrap: nowrap;
     justify-content: flex-start;
     margin: 2em;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     width: 25em;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  
   }
 
 #listening,
 #locked {
-    background: #139943;
+    background: var(--contrast);
     border-radius: var(--border);
     color: var(--active-menu-bg);
     display: flex;
@@ -495,6 +499,10 @@ form:invalid [type="submit"] {
     min-width: 20em;
     padding: 4px;
   }
+
+ .phases #locked {
+  opacity: 0.7;
+ } 
 
 #listening p,
 #locked p {
@@ -615,7 +623,7 @@ section:nth-of-type(3) a {
 
 #next,
 #previous {
-    background: #9264f4;
+    background: var(--contrast);
     border: none;
     border-radius: var(--border);
     color: var(--active-menu-bg);
@@ -653,7 +661,7 @@ input:focus {
   }
 
 select {
-    background: var(--btn-bg);
+    background: var(--contrast);
     border-radius: var(--border);
     color: var(--active-menu-bg);
     margin: 0.5em;
