@@ -28,7 +28,8 @@ Ik heb met Can I Use de gebruikte HTML en CSS elementen geanalyseerd.
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 
 ## Bronnen
-
+* https://dev.to/jaymeeu/how-to-create-a-custom-image-uploader-with-image-preview-36lb
+* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
 
 ## Licentie
 
