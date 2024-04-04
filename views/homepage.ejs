@@ -2,33 +2,18 @@
 <%- include('./partials/navigatie', {current: '/'}); %>
     
     <body class="homescreen">
-      <div class="start-text"> <p>Goodmorning,<br> Shall we start with a story?</p><button id="start"><p>Let's do it!</p></button></div>
-      
-      <dialog class="home-menu">
-        <a href="/"
-          <%- include('./partials/homeNavSVG') %> >
-          <p>Home</p>
-        </a>
+      <section>
+        <h1>Today's listening</h1>
+        <div class="listeningTimer"></div>
+        <p>of your 5-minute goal</p>
+      </section>
 
-        <a href="#"
-          <%- include('./partials/testingNavSVG') %> >
-          <p>Testing</p>
-        </a>
+      <a href="/lessons">
+        <div class="start-text"> 
+          <p>Goodmorning,<br> Shall we start with a story?</p>
+          <button id="start"><p>Let's do it!</p></button>
+        </div>
+      </a>
 
-        <a href="/lessons"
-          <%- include('./partials/lessonsNavSVG') %> >
-          <p>Lessons</p>
-        </a>
-
-        <a href="#"
-          <%- include('./partials/statisticsNavSVG') %> >
-          <p>Statistics</p>
-        </a>
-
-        <a href="#"
-          <%- include('./partials/profileNavSVG') %> >
-          <p>Profile</p>
-        </a>
-      </dialog>
     </body>
 <%- include('./partials/foot') %>
