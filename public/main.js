@@ -15,7 +15,6 @@ let previewImage = () => {
         let fileReader = new FileReader();
         let preview = document.getElementById('addImg'); 
         fileReader.onload = function (event) {
-            preview.style.display = 'block';
             preview.setAttribute('src', event.target.result);
         }
         fileReader.readAsDataURL(files[0]);

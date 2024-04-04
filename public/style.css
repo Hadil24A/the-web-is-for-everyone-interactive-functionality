@@ -112,8 +112,10 @@ html {
   ||==|| ((   )) || \/ || ||==     ||_// ||=|| (( ___ ||== 
   ||  ||  \\_//  ||    || ||___    ||    || ||  \\_|| ||___*/
 
+
   .homescreen section {
     align-items: center;
+    color: var(--menu-clr);
     display: flex;
     flex-direction: column;
     border: var(--menu-clr) 1px solid;
@@ -122,6 +124,7 @@ html {
     width: 25em;
     margin: auto;
     margin-top: 2em;
+    padding: 1em;
   }
   .listeningTimer {
     counter-reset: p calc( var(--p) );
@@ -166,6 +169,24 @@ html {
     margin-top: 1em;
     width: 15.5em;
   }
+
+  .muis {
+    position: absolute;
+    bottom: 7em;
+    left: 42%; 
+  }
+
+  .muis:hover {
+    animation: wiggle 1s infinite;
+  }
+
+  @keyframes wiggle {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }s
 
 /*___   ____ __  __  ____ ____   ___  __   
  // \\ ||    ||\ || ||    || \\ // \\ ||   
@@ -322,6 +343,13 @@ dialog p {
   ||    ||==   \\   \\  ((   )) ||\\||  \\ 
   ||__| ||___ \_)) \_))  \\_//  || \|| \_)) */
 
+.lessonsPage h1 {
+  color: var(--active-menu-bg);
+  font-size: 32px;
+  padding: 1em;
+  text-align: center;
+}
+
 .lessonsPage section:nth-of-type(1) {
   align-items: center;
   width: 100%;
@@ -400,12 +428,12 @@ dialog p {
   }
 
 /* ------------------ ADD A PLAYLIST ----------------------------------------------------------------------------------------------------------------------- */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3em;
-  }
+.newPlaylistPage h1 {
+  color: var(--active-menu-bg);
+  font-size: 32px;
+  padding: 1em;
+  text-align: center;
+}
 
 #backIcon {
     background: none;
@@ -417,6 +445,13 @@ form {
     top: 1em;
     width: max-content;
     z-index: 960;
+  }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
   }
 
 form h2 {
@@ -440,21 +475,19 @@ form h2 {
   }
 
 #showPL {
+  padding: 0.2em;
     position: absolute;
     right: 1em;
     top: 2em;
     width: max-content;
   }
 
-#addImg {
-    background: var(--btn-bg);
-    border: none;
-    border-radius: var(--border);
-    margin: 3em;
-    padding: 6em;
+  .newPlaylistPage img {
+    display: none;
+    width: 100%;
   }
 
-form input {
+  form input {
     border: none;
     border-radius: var(--border);
     display: flex;
@@ -463,11 +496,11 @@ form input {
     margin: 1em;
     padding: 0.2em;
     width: 20em;
-  }
+}
 
-form:invalid [type="submit"] {
-  pointer-events: none;
-  color: grey;
+  form:invalid [type="submit"] {
+    pointer-events: none;
+    color: grey;
 }
 
 .image-preview-container {
@@ -480,15 +513,9 @@ form:invalid [type="submit"] {
   text-align: center;
   width: 30em;
   border-radius: 8px;
-
 }
 
-.newPlaylistPage img {
-  display: none;
-  width: 100%;
-}
-
-.newPlaylistPage input:nth-of-type(1) {
+#image-upload {
   display: none;
 }
 
@@ -496,11 +523,10 @@ form:invalid [type="submit"] {
   display: block;
   margin-left: auto;
   cursor: pointer;
-  padding: 1em;
+  padding: 5em;
   color: var(--menu-clr);
   font-size: 24px;
 }
-
 /* ---------------------------- EINDE ADD A PLAYLIST -------------------------------------------------------------------------------------------------------------- */
 .heart,
 .redHeart {
@@ -623,6 +649,7 @@ section:nth-of-type(3) a {
 
 #storyFlag {
     height: 1em;
+    width: 2.5em;
   }
 
 .playStory {
