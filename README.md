@@ -1,7 +1,4 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
-
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+# Tumi Mundo
 
 ## Inhoudsopgave
 
@@ -13,21 +10,26 @@
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+![New Website Blue Mockup Instagram - Laptop](https://github.com/Hadil24A/the-web-is-for-everyone-interactive-functionality/assets/144008714/6a80e7d6-c8a6-46be-8f68-285aec16fc3b)
 
+Ik heb een interactieve functionaliteit voor Tumi Mundo ontworpen en gebouwd op basis van de user story over User Generatied ContentUser story over User Generated Content: 
+Als gebruiker wil ik een playlist kunnen aanmaken.
+
+[Live URL](https://the-web-is-for-everyone-interactive-urqk.onrender.com/)
 ## Gebruik
-<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+Als eerst heb ik de core functionality met behulp van formulieren in HTML gebouwd. 
+Daarna voegde ik CSS toe voor feedback voor de gebruiker en om de huisstijl toe te passen. 
+Als laatst heb ik client-side JavaScript toegevoegd.
+Ik heb met Can I Use de gebruikte HTML en CSS elementen geanalyseerd. 
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 
-
 ## Bronnen
+* https://dev.to/jaymeeu/how-to-create-a-custom-image-uploader-with-image-preview-36lb
+* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
 
 ## Licentie
 
