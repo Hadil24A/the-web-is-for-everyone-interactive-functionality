@@ -12,8 +12,7 @@
 ## Beschrijving
 ![New Website Blue Mockup Instagram - Laptop](https://github.com/Hadil24A/the-web-is-for-everyone-interactive-functionality/assets/144008714/6a80e7d6-c8a6-46be-8f68-285aec16fc3b)
 
-Ik heb een interactieve functionaliteit voor Tumi Mundo ontworpen en gebouwd op basis van de user story over User Generatied ContentUser story over User Generated Content: 
-Als gebruiker wil ik een playlist kunnen aanmaken.
+Ik heb een interactieve functionaliteit voor Tumi Mundo ontworpen en gebouwd op basis van de user story over User Generatied Content namelijk, als gebruiker wil ik een playlist kunnen aanmaken.
 
 [Live URL](https://the-web-is-for-everyone-interactive-urqk.onrender.com/)
 ## Gebruik
